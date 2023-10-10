@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E4258BA0-0722-432C-8ACE-DE95DF49BF4A}</ProjectGuid>
+    <ProjectGuid>{931EFCA3-E212-499A-812C-B924C473C7ED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LINQ_Les2</RootNamespace>
-    <AssemblyName>LINQ-Les2</AssemblyName>
+    <RootNamespace>EntityFramework</RootNamespace>
+    <AssemblyName>EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gender.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentWithGender.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
