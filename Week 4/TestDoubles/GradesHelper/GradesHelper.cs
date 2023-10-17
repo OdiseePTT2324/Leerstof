@@ -8,11 +8,16 @@ namespace GradesHelper
 {
     public class GradesHelper
     {
-        private GradeRepository gradeRepository;
+        private IGradeRepository gradeRepository;
 
-        public GradesHelper()
+        public GradesHelper() : this(new GradeRepository())
         {
-            this.gradeRepository = new GradeRepository();
+            // deze constructor roept de constructor roept hieronder op met de normale gradeshelper (met link naar de database)
+        }
+
+        public GradesHelper(IGradeRepository gradeRepository)
+        {
+            this.gradeRepository = gradeRepository;
         }
 
         public double CalcAverageGrade(Student student)

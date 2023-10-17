@@ -26,6 +26,11 @@ namespace Interfaces
             InitializeComponent();
             LoadData();
         }
+        public MainWindow(List<IPaymentMethod> paymentMethods)
+        {
+            InitializeComponent();
+            LoadData();
+        }
 
         private void LoadData()
         {

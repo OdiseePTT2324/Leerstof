@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace GradesHelper
 {
-    public class GradeRepository
+    public interface IGradeRepository
+    {
+        void AddScore(Student student, int score);
+
+        void ClearScore(Student student);
+
+        List<int> GetGrades(Student student);
+
+        int GetTotalScore(Student student);
+    }
+
+    public class GradeRepository: IGradeRepository
     {
         private readonly StudentsDbContext studentsDbContext;
 
