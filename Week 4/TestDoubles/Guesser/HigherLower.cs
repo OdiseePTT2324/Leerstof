@@ -6,9 +6,20 @@ namespace Guesser
     {
         int number;
 
-        public HigherLower()
+        // probleem bij het toevoegen van dependency injection is dat Random geen interfaces heeft
+        // oplossing is: schrijf een wrapper klasse
+        // Dit is een klasse die gebouwd is rond de Random 
+
+        private IRandom random;
+
+        public HigherLower(IRandom random)
         {
-            number = new Random().Next(100);
+            number = random.Next(100);
+        }
+
+        public HigherLower(): this(new RandomWrapper())
+        {
+
         }
 
         public string MakeAGuess(int guess)
